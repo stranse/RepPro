@@ -1,45 +1,21 @@
-import device
-
-class Kind:
-    
-    def __init__(self, kind, types):
-        self.kind = kind
-        self.types = types
-        
-    def __str__(self):
-        self.kind = input("Введите тип устройства: ")
-        self.types = ['Ноутбук','Телефон','Телевизор']
-
-        if self.kind == self.types[0]:
-            return str(device.Laptop('','','',''))
-
-        if self.kind == self.types[1]:
-            return str(device.Phone('','',''))
-
-        if self.kind == self.types[2]:
-            return str(device.TV('','','',''))
-
-        else:
-            return f'Выбрано неизвестное устройство'
-
-
-
-# def create_counter():
-#     i = 0
+# import main
+# import device
 #
-#     def func():
-#         nonlocal i
-#         i += 1
-#         return i
-#     return func
-# class IncrementCounter:
+# def Kind():
+#     types = ['Ноутбук', 'Телефон', 'Телевизор']
 #
-#     def __init__(self):
-#         self._value = 0
+#     if main.kind == types[0]:
+#         return str(device.Laptop('', '', '', ''))
 #
-#     def new_value(self):
-#         self._value += 1
-#         return self._value
-
-
-            
+#     if main.kind == types[1]:
+#         return str(device.Phone('', '', ''))
+#
+#     if main.kind == types[2]:
+#         return str(device.TV('', '', '', ''))
+#
+#     else:
+#         print("Выбрано неизвестное устройство, вам следует выбрать из указанного списка.")
+#         return Kind()
+#         # return (Reciept('','','','','',''))
+#
+#
