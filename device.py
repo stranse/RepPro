@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class Device:
     type = ""
@@ -65,3 +66,6 @@ class TV (Device):
 
 
 
+=======
+print("Hello")
+>>>>>>> origin/dev

@@ -28,3 +28,6 @@ dopfile.Output()
 
 
 
+=======
+print("Hello")
+>>>>>>> origin/dev

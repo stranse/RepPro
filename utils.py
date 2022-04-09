@@ -1,3 +1,4 @@
+
 import device
 
 class Kind:
@@ -43,3 +44,6 @@ class Kind:
 
 
             
+=======
+print("Hello")
+>>>>>>> origin/dev

@@ -1,4 +1,5 @@
 
+
 import reciept
 import utils
 
@@ -18,3 +19,6 @@ def Output():
 
 
     f.close()
+=======
+print("Hello")
+>>>>>>> origin/dev
