@@ -1,51 +1,21 @@
-import device
+
 import random
 import datetime
 
 class Reciept:
 
-    number = 1
     position = ['Готово', 'В работе', 'Выдано клиенту']
-    kind = input("Выберете тип устройства (Ноутбук, Телефон, Телевизор): ")
 
-    def __init__(self, number, fullname, breakdowndescription, gettingdate, finishingdate, status):
-        self.number = Reciept.number
-        Reciept.number += 1
-        self.fullname = input("Введите ФИО клиента: ")
-        self.breakdowndescription = input("Введите описание поломки: ")
+    def __init__(self, gettingdate, finishingdate, status):
         self.gettingdate = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
         self.finishingdate = (datetime.datetime.now() +
                               datetime.timedelta(days = random.randint(1, 5))).strftime("%d-%m-%Y %H:%M")
         self.status = random.choice(Reciept.position)
 
-    def Kind (self):
-        types = ['Ноутбук', 'Телефон', 'Телевизор']
-
-        if self.kind == types[0]:
-            return str(device.Laptop('', '', '', ''))
-
-        if self.kind == types[1]:
-            return str(device.Phone('', '', ''))
-
-        if self.kind == types[2]:
-            return str(device.TV('', '', '', ''))
-
-        else:
-            print ("Выбрано неизвестное устройство, вам следует выбрать из указанного списка.")
-            #print (Reciept.Kind (self))
-            return (Reciept('','','','','',''))
-
     def __str__(self):
-        return f'Квитанция №: {self.number}\n' \
-               f'Фамилия Имя Отчество клиента: {self.fullname}\n'\
-               f'Что сдано в ремонт: {Reciept.Kind(self)}\n' \
-               f'Описание неисправности: {self.breakdowndescription}\n' \
-               f'Дата приемки изделия: {self.gettingdate}\n' \
+        return f'Дата приемки изделия: {self.gettingdate}\n' \
                f'Статус изделия: {self.status}\n' \
                f'Планируемая дата выдачи заказа: {self.finishingdate}'
-
-
-
 
 
 
