@@ -6,14 +6,18 @@ class Reciept:
 
     position = ['Готово', 'В работе', 'Выдано клиенту']
 
-    def __init__(self, gettingdate, finishingdate, status):
+    def __init__(self, fullname, breakdowndescription):
+        self.fullname = fullname
+        self.breakdowndescription = breakdowndescription
         self.gettingdate = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
         self.finishingdate = (datetime.datetime.now() +
                               datetime.timedelta(days = random.randint(1, 5))).strftime("%d-%m-%Y %H:%M")
         self.status = random.choice(Reciept.position)
 
     def __str__(self):
-        return f'Дата приемки изделия: {self.gettingdate}\n' \
+        return f'Фамилия имя отчество клиента: {self.fullname}\n' \
+               f'Описание неисправности: {self.breakdowndescription}\n' \
+               f'Дата приемки изделия: {self.gettingdate}\n' \
                f'Статус изделия: {self.status}\n' \
                f'Планируемая дата выдачи заказа: {self.finishingdate}'
 
